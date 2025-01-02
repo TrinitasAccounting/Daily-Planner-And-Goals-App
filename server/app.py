@@ -9,6 +9,13 @@ from flask_restful import Resource
 # Local imports
 from config import app, db, api
 # Add your model imports
+from models import ToDos
+
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+from flask import jsonify, abort, render_template
 
 
 # Views go here!
@@ -16,6 +23,7 @@ from config import app, db, api
 @app.route('/')
 def index():
     return '<h1>Project Server</h1>'
+
 
 
 if __name__ == '__main__':
